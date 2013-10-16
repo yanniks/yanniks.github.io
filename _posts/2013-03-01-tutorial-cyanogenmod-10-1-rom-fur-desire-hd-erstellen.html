@@ -1,0 +1,91 @@
+---
+layout: post
+title: '[UPDATE 19.04.2013] Tutorial: CyanogenMod 10.1 ROM für das HTC Desire HD erstellen'
+categories:
+- Android Tutorials
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+<p style="text-align: center;"><strong>How To: CyanogenMod ROM für das HTC Desire HD compilen</strong></p>
+
+
+[caption id="" align="aligncenter" width="372"]<img alt="CyanogenMod" src="http://www.cyanogenmod.org/wp-content/themes/cyanogenmod/images/logo-cid.png" width="372" height="80" /> CyanogenMod[/caption]
+
+Die alternative Android ROM CyanogenMod ist aufgrund der vielen Erweiterungen und Möglichkeiten bei den Anwendern sehr beliebt. Leider wird seit Android 4 das Desire HD nicht mehr unterstützt. Daher biete ich euch hier ein Tutorial an, wie ihr eure eigene CyanogenMod Version für das Desire HD auf Basis von Android 4.2.2 erstellen könnt.
+
+<strong>Voraussetzungen:</strong>
+<ul>
+	<li>Ubuntu 12.10 64 Bit (Mac OS X funktioniert leider nicht, mit VMware Fusion könnt ihr VMs erstellen)</li>
+	<li>mindestens 50 GB Platz auf der Festplatte, mehr ist gut</li>
+</ul>
+<strong>Tutorial:</strong>
+<ol>
+	<li><span style="line-height: 14px;">Zuerst öffnet den Terminal, indem ihr auf der Dash-Startseite (Feld links oben) nach "Terminal" sucht und öffnet</span></li>
+	<li>Gebt nun die folgenden Befehle ein:
+<pre dir="ltr">sudo apt-get install openjdk-6-jdk git-core python \
+  gnupg flex bison gperf build-essential \
+  zip curl zlib1g-dev libc6-dev lib32ncurses5-dev ia32-libs \
+  x11proto-core-dev libx11-dev lib32readline-gplv2-dev lib32z-dev \
+  libgl1-mesa-dev g++-multilib mingw32 tofrodos python-markdown \
+  libxml2-utils xsltproc libx11-dev:i386 lzop \
+  git gnupg flex bison gperf build-essential \
+  zip curl libc6-dev libncurses5-dev x11proto-core-dev \
+  libx11-dev libreadline6-dev libgl1-mesa-glx \
+  libgl1-mesa-dev g++-multilib mingw32 tofrodos \
+  python-markdown libxml2-utils xsltproc zlib1g-dev</pre>
+</li>
+	<li>Ladet anschließend von dieser Website das Android SDK für Linux runter: <a href="http://developer.android.com/sdk/index.html">http://developer.android.com/sdk/index.html</a></li>
+	<li>Gebt nun im Terminal den folgenden Befehl ein:
+<pre dir="ltr">cd &amp;&amp; nano .bashrc</pre>
+</li>
+	<li>In dem anschließenden Fenster geht mit dem Pfeil nach unten bis zur untersten Stelle und fügt nun folgende Zeilen ein, danach beendet das Programm mit Steuerung + O, Enter und Steuerung + X:
+<pre dir="ltr"># Android tools
+export PATH=${PATH}:~/android-sdk/tools
+export PATH=${PATH}:~/android-sdk/platform-tools
+export PATH=${PATH}:~/bin</pre>
+</li>
+	<li>Gebt nun nano .profile ein und macht nun das Selbe wie in Schritt 5, fügt stattdessen aber folgende Zeile ein:
+<pre dir="ltr">PATH="$HOME/<strong>android-sdk-Verzeichnis</strong>/tools:$HOME/<strong>android-sdk-Verzeichnis</strong>/platform-tools:$PATH"</pre>
+</li>
+	<li>Ladet nun die Updates in dem Fenster nach dem Eintippen von "android" herunter.</li>
+	<li>Als nächstes sind mal wieder einige Kommandos im Terminal nötig:
+<pre dir="ltr">mkdir ~/bin
+PATH=~/bin:$PATH
+curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo &gt; ~/bin/repo
+chmod a+x ~/bin/repo
+mkdir cm10
+cd cm10/
+repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
+mkdir .repo/local_manifests
+curl -s -o .repo/local_manifests/ace_manifest.xml https://raw.github.com/yanniks/android/cm-10.1/ace_manifest.xml</pre>
+</li>
+	<li>Beantwortet nun die Fragen, danach könnt ihr schon fast mit dem Erstellen der ROM beginnen:
+<pre dir="ltr">repo sync
+cd vendor/cm/
+./get-prebuilts
+cd ../../
+. build/envsetup.sh
+lunch cm_ace-userdebug
+mka bacon</pre>
+</li>
+	<li>In dem Ordner out/target/product/ace findet ihr anschließend die fertige Build, die ihr auf euer Gerät kopieren und anschließend nutzen könnt.</li>
+</ol>
+<strong>Build aktualisieren:</strong>
+
+Wenn ihr eure Build aktualisieren wollt, gebt einfach hintereinander folgende Kommandos ein, danach findet ihr wieder im oben genannten Ordner eine neue Build:
+<pre dir="ltr">cd cm10/
+rm out/target/product/ace/system/build.prop
+rm out/target/product/ace/cm-*
+repo sync
+cd vendor/cm/
+./get-prebuilts
+cd ../../
+. build/envsetup.sh
+lunch cm_ace-userdebug
+mka bacon</pre>
+Solltet ihr noch weitere Fragen haben, nutzt dafür bitte die die Kommentarfunktion des Blogs oder meldet euch in dem folgenden Thread auf Android-Hilfe.de: <a title="klick!" href="http://www.android-hilfe.de/custom-roms-fuer-htc-desire-hd/81980-rom-diskussion-cyanogenmod-nightly-unofficial-builds-update-cm-10-1-a.html" target="_blank">klick!</a><a title="klick!" href="http://www.android-hilfe.de/custom-roms-fuer-htc-desire-hd/81980-rom-diskussion-cyanogenmod-nightly-unofficial-builds-update-cm-10-1-a.html" target="_blank">
+</a>

@@ -1,0 +1,31 @@
+---
+layout: post
+title: (Android) Linux Kernel aktualisieren
+categories:
+- Android Tutorials
+- Linux
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+<p style="text-align: center;"><strong>Da ich ziemlich lange gebraucht habe, um eine recht einfache Aufgabe zu bewerkstelligen, zeige ich euch heute, wie ihr ganz einfach den Linux Kernel auf eine aktuelle Version anheben könnt.</strong></p>
+<p style="text-align: center;"><a href="http://yanniks.de/wp/wp-content/uploads/2013/04/Tux.png"><img class="size-medium wp-image-69 aligncenter" alt="Tux" src="http://yanniks.de/wp/wp-content/uploads/2013/04/Tux.png" width="265" height="314" /></a></p>
+<p style="text-align: center;">Zuerst müsst ihr den Linux-Code, den ihr überarbeiten wollt, auf euren lokalen Computer laden. Wenn ihr dieses gemacht habt, werft zuerst einen Blick in die Datei namens <em>Makefile</em>.</p>
+<p style="text-align: center;">In den ersten Zeilen solltet ihr etwa so etwas finden:</p>
+
+<blockquote>VERSION = 3
+PATCHLEVEL = 0
+SUBLEVEL = 73
+EXTRAVERSION =
+NAME = Sneaky Weasel</blockquote>
+<p style="text-align: center;">Die ersten Zahlen, die hinter VERSION zusammen mit PATCHLEVEL stehen, stehen für die Linux-Version, in diesem Falle 3.0 . Die SUBLEVEL-Version ist für uns auch interessant, da wir diese für die Wahl des benötigten Patches brauchen, die genaue Linux-Version ist hier also 3.0.73 .</p>
+<p style="text-align: center;">Ruft nun <a href="https://www.kernel.org/pub/linux/kernel/v3.x/incr/">diese Website</a> auf und sucht nach dem Patch, den ihr benötigt. Da die in diesem Beispiel verwendete Linux-Version 3.0.73 derzeit die zweitaktuellste Version des Linux-Kernels 3.0 ist, benötigen wir nur einen einzigen Patch, nämlich den auf Version 3.0.74, wobei der Dateiname des Patches immer nach folgendem Format aufgebaut ist: <em><strong>patch-</strong><strong>DerzeitGenutzteVersion</strong><strong>-</strong><strong>SublevelDerNächstenVersion.Komprimierung</strong></em>, z.B.<strong></strong><em><strong> patch-3.0.73-74.gz</strong></em><b><em> </em></b>. Es ist egal, welche Art von Komprimierung ihr nutzt, Hauptsache ihr könnt sie entpacken. Ich wähle nun für unser Beispiel die Datei <em>patch-3.0.73-74.gz, </em>kopiert nun die darin enthaltene Datei in einen Ordner über den Code und tippt in einem Terminal-Fenster folgendes ein:</p>
+
+<blockquote>
+<p style="text-align: left;">patch -p1 &lt; ../patch-3.0.73-74</p>
+</blockquote>
+<p style="text-align: center;">Natürlich solltet ihr den Dateinamen, der an der letzten Position steht, durch den Dateinamen eures Patches ersetzen. Nun ist euer Kernel auf die nächst höhere Version aktualisiert, macht dieses nun sooft, bis ihr die neuste, verfügbare Version eingespielt habt.</p>
+<p style="text-align: center;">Ein Risiko, dass diese Methode nicht funktioniert, besteht leider immer, dieses ist aber normal nicht der Fall. Bei eventuell entstandenen Fragen könnt ihr mich gerne per Facebook, Twitter, Google+ oder natürlich auch über die Kommentarfunktion kontaktieren.</p>

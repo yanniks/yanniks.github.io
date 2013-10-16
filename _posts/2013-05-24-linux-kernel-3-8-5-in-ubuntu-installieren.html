@@ -1,0 +1,25 @@
+---
+layout: post
+title: '[UPDATED] Linux Kernel 3.9.4 in Ubuntu installieren'
+categories:
+- Linux
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+<p style="text-align: center;"><strong>Aktualisiert für Linux 3.9.4!</strong></p>
+<p style="text-align: center;"><strong>Der Linux-Kernel, der in Ubuntu 13.04 von Haus aus integriert ist, ist schon etwas älter und  hört auf den Namen Linux 3.8, welcher nicht mehr "von Haus aus" unterstützt wird. Hier zeige ich euch, wie ihr eure Ubuntu-Installation auf Version 3.9.4 aktualisieren könnt.</strong></p>
+<p style="text-align: center;"><a href="http://yanniks.de/wp/2013/03/linux-kernel-3-8-5-in-ubuntu-installieren/tux/" rel="attachment wp-att-57"><img class="alignnone size-medium wp-image-57" alt="tux" src="http://yanniks.de/wp/wp-content/uploads/2013/03/tux.png" /></a></p>
+<p style="text-align: center;">Dieses ist recht einfach, in einem Terminal-Fenster müsst ihr lediglich ein paar Kommandos eingeben. Ein Script, welches von UpUbuntu stammt und ich nur für die aktuelle Version aktualisert habe, übernimmt den Großteil der Arbeit.</p>
+
+<blockquote>
+<p style="text-align: left;"><em>cd /tmp</em></p>
+<p style="text-align: left;"><em>wget https://dl.dropbox.com/s/pavvgpw0631ljta/kernel-3.9.4 -O kernel-3.9.4</em></p>
+<p style="text-align: left;">sudo chmod +x kernel-3.9.4</p>
+<p style="text-align: left;">sudo sh kernel-3.9.4</p>
+<p style="text-align: left;">sudo reboot</p>
+</blockquote>
+<p style="text-align: center;">Anschließend ist die Arbeit getan und der Linux Kernel ist aktualisiert. Ich übernehme allerdings keine Garantie, ob das Update funktioniert. Sollte Ubuntu danach nicht mehr booten ist das nicht mein, sondern euer Problem! Erstellt deshalb sicherheitshalber ein Backup von eurer Ubuntu-Installation.</p>
