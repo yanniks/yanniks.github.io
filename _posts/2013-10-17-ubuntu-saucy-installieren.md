@@ -2,6 +2,7 @@
 layout: post
 title: HowTo: Ubuntu installieren
 description: "So installiert ihr Ubuntu Saucy Salamanter via SSH, Terminal oder über den Desktop"
+modified: 2013-10-17
 category: articles
 tags: [ubuntu, saucy, 13.10]
 ---
