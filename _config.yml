@@ -2,7 +2,7 @@ title:            yanniks.de Blog
 tagline:          Der neue, neue yanniks.de Blog.
 description:      Dieses ist der neue, neue yanniks.de Blog, aktuell in Arbeit.
 #Comment out url when working locally to resolve base urls correctly
-url:              http://yanniks.github.io
+url:              http://blog.yanniks.de
 
 # Owner/author information
 owner:
@@ -23,9 +23,9 @@ owner:
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
-google_verify:      
+google_verify:      EPNUMPISj1KgKfeUe5cy1SRzJeJ6WoojTbEwS-uYWvI
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:        
+bing_verify:        F2115B0BD6D97641BBB06671F6FB100A
 
 # Links to include in top navigation
 # For external links add external: true
