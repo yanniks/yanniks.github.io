@@ -1,10 +1,10 @@
 ---
 layout: post
-title: HowTo: Ubuntu installieren
-description: "So installiert ihr Ubuntu Saucy Salamanter via SSH, Terminal oder über den Desktop"
+title: Ubuntu Saucy Installieren
+description: "So aktualisiert ihr euer Ubuntu auf die neuste Version."
 modified: 2013-10-17
 category: articles
-tags: [ubuntu, saucy, 13.10]
+tags: [saucy, ubuntu, release, upgrade, update, new]
 ---
 
 **Nach der Veröffentlichung von Ubuntu 13.10 Saucy Salamander am heutigen Tage ist es empfehlenswert das Update schnellstmöglich einzuspielen. Hier zeige ich euch, wie ihr vorgehen müsst.**
