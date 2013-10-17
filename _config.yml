@@ -30,10 +30,15 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
+  - title: Startseite
+    url: /
   - title: Geschichte
     url: /geschichte
   - title: Artikel
     url: /articles
+  - title: Impressum
+    url: http://yanniks.de/cms/impressum.html
+    external: true
   - title: Web
     url: http://yanniks.de/cms
     external: true
