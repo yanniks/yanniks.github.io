@@ -1,7 +1,7 @@
 ---
 layout: home
-description: "A responsive Jekyll theme with editorial tendencies by designer Michael Rose."
-tags: [Jekyll, theme, responsive, blog, template]
+description: The new developer website - jetzt mit neuem Blog."
+tags: [Blog, Website, Yannik, Ehlert, Yannik Ehlert, new, developer, github]
 image:
   feature: header.png
   credit: Dieter  / pixelio.de
