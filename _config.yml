@@ -33,9 +33,9 @@ links:
   - title: Startseite
     url: /
   - title: Geschichte
-    url: /geschichte
+    url: /geschichte/
   - title: Artikel
-    url: /articles
+    url: /articles/
   - title: Impressum
     url: http://yanniks.de/cms/impressum.html
     external: true
