@@ -2,12 +2,6 @@
 <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
 <meta name="description" content="{{ page.description }}">
 <meta name="keywords" content="{{ page.tags | join: ', ' }}">
-<meta name="google-play-app" content="app-id=de.yanniks.app">
-<link rel="stylesheet" type="text/css" href="http://yanniks.de/cms/asset/css/jquery.ultimate-smartbanner.css" media="screen">
-<script src="http://yanniks.de/cms/asset/js/jquery.ultimate-smartbanner.php?lang=deutsch"></script>
-<script>
-	$(function() { $.smartbanner() } )
-</script>
 {% if site.owner.twitter %}<!-- Twitter Cards -->
 {% if page.image.feature %}<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{{ site.url }}/images/{{ page.image.feature }}">
