@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Ubuntu Saucy Installieren
+title: "[Updated] Ubuntu Saucy Installieren"
 description: "So aktualisiert ihr euer Ubuntu auf die neuste Version."
-modified: 2013-10-17
+modified: 2014-04-17
 category: articles
 tags: [saucy, ubuntu, release, upgrade, update, new]
 ---
-
+**Update 17.04.2014:** Anleitung gilt auch für Ubuntu 14.04 LTS.
+<br><br>
 **Nach der Veröffentlichung von Ubuntu 13.10 Saucy Salamander am heutigen Tage ist es empfehlenswert das Update schnellstmöglich einzuspielen. Hier zeige ich euch, wie ihr vorgehen müsst.**
 
 Das Update ist natürlich nicht nur aus dem Aspekt der neuen Funktionen interessant, Ubuntu-Veröffentlichungen bringen auch neue Programmversionen mit sich, die einerseits die Stabiliät des Systems verbessert, andererseits die Leisung des Computers teilweise vielleicht auch besser ausnutzen kann (Stichwort: 32-bit / 64-bit).
