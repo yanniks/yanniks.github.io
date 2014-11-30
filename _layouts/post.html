@@ -34,6 +34,7 @@
         <div class="article-author-bottom">
           {% include _author-bio.html %}
         </div>
+	<div class="shariff" data-backend-url="https://yanniks.de/shariff/blog.php" data-url="{{ site.url }}{{ page.url }}" data-orientation="horizontal"></div><br>
         <p class="byline"><strong>{{ page.title }}</strong> wurde ver&ouml;ffentlicht am <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%d. %B %Y" }}</time>{% if page.modified %} und zuletzt ge&auml;ndert am <time datetime="{{ page.modified | date: "%d.%m.%Y" }}" itemprop="dateModified">{{ page.modified | date: "%d. %B %Y" }}</time>{% endif %} von <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="{{ site.url }}/about" title="About {{ site.owner.name }}" itemprop="url">{{ site.owner.name }}</a></span></span>.</p>
       </footer>
     </div><!-- /.article-wrap -->
