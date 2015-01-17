@@ -2,7 +2,7 @@
 layout: none
 ---
 [
-{% for post in site.posts limit:20 %}
+{% for post in site.posts %}
   {
     "title":"{{ post.title }}",
     "subtitle":"{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 120 }}{% endif %}",
