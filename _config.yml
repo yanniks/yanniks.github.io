@@ -2,7 +2,7 @@ title:            yanniks.de Blog
 tagline:          Der neue, neue yanniks.de Blog.
 description:      Dieses ist der neue, neue yanniks.de Blog über alles und die Welt.
 #Comment out url when working locally to resolve base urls correctly
-url:              http://blog.yanniks.de
+url:              https://yanniks.github.io
 
 # Owner/author information
 owner:
