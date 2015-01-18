@@ -5,16 +5,6 @@
 <link rel="stylesheet" type="text/css" href="http://yanniks.de/cms/asset/css/smartbanner.css"/>
 <link href="/assets/css/shariff.min.css" rel="stylesheet">
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script>
-window.onload = function() {
-  var ua = navigator.userAgent.toLowerCase();
-  var isAndroid = ua.indexOf("android") > -1;
-  var androidapp = ua.indexOf("yanniksdeandroidapp") > -1;
-  if(isAndroid && !androidapp) {
-	$('.smartbanner').show('slide');
-  }
-}
-</script>
 {% if site.owner.twitter %}<!-- Twitter Cards -->
 {% if page.image.feature %}<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{{ site.url }}/images/{{ page.image.feature }}">
