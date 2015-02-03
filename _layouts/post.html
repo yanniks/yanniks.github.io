@@ -12,6 +12,6 @@ window.location = "https://yanniks.de/web/" + "{{ page.url }}".replace("/article
     <div class="article-wrap" itemprop="text">
       {{ content }}
       <hr />
-	<div class="shariff" data-backend-url="https://yanniks.de/shariff/blog.php" data-url="http://blog.yanniks.de{{ page.url }}" data-orientation="horizontal"></div><br>
+	<div class="shariff" data-twitter-via="y_anniks" data-theme="round" data-title="{{ page.title }}" data-backend-url="https://yanniks.de/shariff/blog.php" data-url="http://blog.yanniks.de{{ page.url }}" data-orientation="horizontal"></div><br>
 	{% assign month = page.date | date: '%B' | replace: 'January', 'Januar' | replace: 'February', 'Februar' | replace: 'March','März' | replace: 'May','Mai' | replace: 'June', 'Juni' | replace: 'July', 'Juli' | replace: 'October', 'Oktober' | replace: 'December', 'Dezember' %}
         <p class="byline"><strong>{{ page.title }}</strong> wurde am <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%d." }} {{ month }} {{ page.date | date: "%Y" }}</time> von <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ site.owner.name }}</span></span> ver&ouml;ffentlicht{% if page.modified %} und zuletzt ge&auml;ndert am <time datetime="{{ page.modified | date: "%d.%m.%Y" }}" itemprop="dateModified">{{ page.modified | date: "%d. %B %Y" }}</time>{% endif %}.</p>
